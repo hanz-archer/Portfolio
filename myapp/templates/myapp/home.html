@@ -4,30 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My E-Portfolio</title>
+    <title>Hans Archer M. Dalubatan</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden; /* Prevent horizontal overflow */
-        }
-        /* Animation for the hamburger icon */
-        .hamburger {
-            transition: transform 0.3s ease;
-        }
-        .hamburger.active {
-            transform: rotate(90deg);
-        }
-        /* Styles for mobile menu card */
-        #mobile-menu {
-            transition: max-height 0.3s ease;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-height: 0; /* Initially hide the menu */
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'myapp/css/home.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 <body class="bg-gray-100 font-Poppins overflow-x-hidden">
@@ -45,6 +28,7 @@
                 <li><a href="#education" class="hover:text-blue-600 transition">Education</a></li>
                 <li><a href="#experience" class="hover:text-blue-600 transition">Experience</a></li>
                 <li><a href="#projects" class="hover:text-blue-600 transition">My Projects</a></li>
+                <li><a href="#certifications" class="hover:text-blue-600 transition">My Certifications</a></li>
                 <li><a href="#contact" class="hover:text-blue-600 transition">Contact Me</a></li>
             </ul>
         </nav>
@@ -66,12 +50,7 @@
     <main>
         <section id="home" class="min-h-screen bg-white flex flex-col md:flex-row p-10 md:p-20 mb-4">
             <!-- Left Section -->
-            <div class="w-full md:w-1/2 flex flex-col justify-center items-start p-6 md:p-10">
-                <div class="flex justify-center mb-2">
-                    <div class="bg-green-500 text-white rounded-full px-4 py-2 text-center shadow-md">
-                        <span class="font-bold">Currently Studying</span>
-                    </div>
-                </div>                            
+            <div class="w-full md:w-1/2 flex flex-col justify-center items-start p-6 md:p-10" data-aos="fade-up">                          
                 <h1 class="text-3xl md:text-4xl font-semibold mb-4">Hi! I am Hanz Archer Montezon Dalubatan</h1>
                 <p class="text-gray-600 mb-8">A Bachelor of Science in Information Technology Student of Cebu Technological University.<br>
                     Aspiring Fullstack Developer.
@@ -98,7 +77,7 @@
             </div>
         
             <!-- Right Section with Image -->
-            <div class="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
+            <div class="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0" data-aos="fade-up">
                 <img src="{% static 'myapp/img/myphoto.jpg' %}" alt="Hanz Archer" class="w-2/3 md:w-3/4 h-auto rounded-lg shadow-lg" />
             </div>
         </section>
@@ -106,14 +85,158 @@
         
         
         <section id="about" class="min-h-screen bg-gray-200 flex flex-col justify-center items-center p-6 mb-4">
-            <h2 class="text-3xl font-semibold mb-2">About Me</h2>
-            <p class="text-gray-600 text-center"></p>
+            <h2 class="text-5xl font-bold text-gray-900 mb-8">About Me</h2>
+
+            <!-- About Me Text -->
+            <p class="text-gray-600 text-center max-w-xl mb-12 leading-relaxed">
+                I'm a passionate web developer focused on creating clean, functional, and user-friendly web applications. 
+                I love working with both front-end and back-end technologies to bring ideas to life. Simplicity and functionality
+                are at the heart of everything I build.
+            </p>
+            
+            <p class="text-gray-600 text-center max-w-xl mb-12 leading-relaxed">
+                Outside of coding, I'm an avid fan of Marvel movies. The stories, the heroes, and the universe they create have always fascinated me. 
+                At one point in my life, I even dreamed of becoming a geologist or astrophysicist to explore the wonders of Earth and space. 
+                While my path took a different direction, my curiosity about the universe still fuels my passion for learning new things.
+            </p>
+            
+            <!-- Favorite Technologies Header -->
+            <h3 class="text-3xl font-semibold text-gray-800 mb-6">Technologies I Love</h3>
+            
+            <!-- Technologies SVG Section -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+                <!-- JavaScript -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/js.svg' %}" alt="JavaScript" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">JavaScript</p>
+                </div>
+                
+                <!-- Tailwind CSS -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/tailwind.svg' %}" alt="Tailwind CSS" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">Tailwind CSS</p>
+                </div>
+                
+                <!-- HTML -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/html.svg' %}" alt="HTML" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">HTML</p>
+                </div>
+        
+                <!-- CSS -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/css.svg' %}" alt="CSS" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">CSS</p>
+                </div>
+        
+                <!-- Django -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/django.svg' %}" alt="Django" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">Django</p>
+                </div>
+            </div>
+            
+            <!-- Applications Used Header -->
+            <h3 class="text-3xl font-semibold text-gray-800 mb-6">Applications I Use</h3>
+        
+            <!-- Applications SVG Section -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+                <!-- GitHub -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/githublogo.svg' %}" alt="GitHub" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">GitHub</p>
+                </div>
+        
+                <!-- Git -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/git.svg' %}" alt="Git" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">Git</p>
+                </div>
+        
+                <!-- VS Code -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/vsc.svg' %}" alt="VS Code" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">VS Code</p>
+                </div>
+        
+                <!-- Visual Studio Community -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/vs.svg' %}" alt="Visual Studio Community" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">Visual Studio Community</p>
+                </div>
+        
+                <!-- Android Studio -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/androidstudio.svg' %}" alt="Android Studio" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">Android Studio</p>
+                </div>
+        
+                <!-- Packet Tracer -->
+                <div class="flex flex-col items-center">
+                    <img src="{% static 'myapp/img/cisco.svg' %}" alt="Packet Tracer" class="w-16 h-16 grayscale hover:grayscale-0 transition duration-300">
+                    <p class="text-gray-700 mt-3 text-sm">Packet Tracer</p>
+                </div>
+            </div>
         </section>
+        
 
         <section id="education" class="min-h-screen bg-white flex flex-col justify-center items-center p-6 mb-4">
-            <h2 class="text-3xl font-semibold mb-2">Education</h2>
-            <p class="text-gray-600 text-center"></p>
+            <h2 class="text-5xl font-bold text-gray-900 mb-8">Education</h2>
+        
+            <div class="container mx-auto px-4">
+                <!-- Timeline Wrapper -->
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <!-- Timeline Items -->
+                    <div class="flex flex-col items-center mb-8 md:mb-0">
+                        <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">1</div>
+                        <h3 class="text-xl font-semibold mt-2">Elementary </h3>
+                        <p class="text-gray-600">Langtad Elementary School</p>
+                        <p class="text-gray-600">Graduated in 2014</p>
+                    </div>
+        
+                    <div class="flex flex-col items-center mb-8 md:mb-0">
+                        <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">2</div>
+                        <h3 class="text-xl font-semibold mt-2">Saint Michael School</h3>
+                        <p class="text-gray-600">Saint Michael School</p>
+                        <p class="text-gray-600">Graduated in 2018</p>
+                    </div>
+        
+                    <div class="flex flex-col items-center mb-8 md:mb-0">
+                        <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">3</div>
+                        <h3 class="text-xl font-semibold mt-2">Senior High School</h3>
+                        <p class="text-gray-600">Argao National High School</p>
+                        <p class="text-gray-600">TVL - ICT Strand</p>
+                        <p class="text-gray-600">Graduated in 2020</p>
+                    </div>
+        
+                    <div class="flex flex-col items-center mb-8 md:mb-0">
+                        <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">4</div>
+                        <h3 class="text-xl font-semibold mt-2">Work Immersion Program</h3>
+                        <p class="text-gray-600">Completed in January 2020</p>
+                    </div>
+        
+                    <div class="flex flex-col items-center mb-8 md:mb-0">
+                        <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">5</div>
+                        <h3 class="text-xl font-semibold mt-2">College</h3>
+                        <p class="text-gray-600">Studied Information Technology</p>
+                        <p class="text-gray-600">Kwentas Klaras PMIS Development</p>
+                        <p class="text-gray-600">Expected Graduation: 2025</p>
+                    </div>
+        
+                    <div class="flex flex-col items-center mb-8 md:mb-0">
+                        <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">6</div>
+                        <h3 class="text-xl font-semibold mt-2">Graduation Day</h3>
+                        <p class="text-gray-600">June 2025</p>
+                    </div>
+                </div>
+                <!-- Timeline Line -->
+                <div class="w-full h-1 bg-gray-300 mt-4"></div>
+            </div>
         </section>
+        
+        
+        
+        
 
         <section id="experience" class="min-h-screen bg-gray-200 flex flex-col justify-center items-center p-6 mb-4">
             <h2 class="text-3xl font-semibold mb-6">Experience</h2>
@@ -121,7 +244,7 @@
             <!-- Experience Card Section -->
             <div class="flex flex-col md:flex-row justify-center items-stretch w-full max-w-6xl mx-auto mt-8 gap-6">
                 <!-- First Experience Card -->
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full flex flex-col">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full flex flex-col" data-aos="fade-up">
                     <img src="{% static 'myapp/img/anhs.png' %}" alt="Company Logo" class="w-32 h-32 object-cover mx-auto mt-4"> 
                     <div class="p-6 flex-grow">
                         <h3 class="text-2xl font-semibold mb-2">Senior High School Work Immersion Program</h3>
@@ -139,7 +262,7 @@
                 </div>
         
                 <!-- Second Experience Card -->
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full flex flex-col">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full flex flex-col" data-aos="fade-up">
                     <img src="{% static 'myapp/img/psa.svg' %}" alt="Company Logo" class="w-32 h-32 object-cover mx-auto mt-4"> 
                     <div class="p-6 flex-grow">
                         <h3 class="text-2xl font-semibold mb-2">2024 POPCEN-CBMS Field Enumerator</h3>
@@ -155,16 +278,12 @@
             </div>
         </section>
         
-        
-        
-        
-        </section>
-        <section id="projects" class="min-h-screen bg-white flex flex-col items-center justify-center py-12 px-6">
+        <section id="projects" class="min-h-screen bg-white flex flex-col items-center justify-center md:p-20 mb-4">
             <h2 class="text-4xl font-bold mb-6 text-gray-800">Current Projects</h2>
             <p class="text-gray-600 text-center mb-8">Check out some of the exciting projects I'm currently working on.</p>
             
             <!-- Projects Container -->
-            <div class="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl mx-auto mt-8"> 
+            <div class="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl mx-auto mt-8" data-aos="fade-up"> 
                 <!-- Tech Stack Section -->
                 <div class="w-full md:w-1/3 p-4 flex flex-col items-start mb-6 md:mb-0"> 
                     <h3 class="text-3xl font-semibold mb-4">Technologies Used</h3>
@@ -198,12 +317,87 @@
                 </div>
             </div>
         </section>
+
+        <section id="certifications" class="min-h-screen bg-gray-200 flex flex-col justify-center items-center p-6 mb-4">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Certifications</h2>
+            <p class="text-gray-600 text-center max-w-2xl mb-10">
+                Here are some of the certifications I have earned over the course of my career.
+            </p>
         
+            <!-- Increased gap between the cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 w-full max-w-5xl">
+                <!-- Certification Card 1 -->
+                <div class="relative bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl mx-auto w-full max-w-lg">
+                    <div class="overflow-hidden h-72 rounded-t-xl group relative">
+                        <img src="{% static 'myapp/img/gdsc1.jfif' %}" alt="Certification 1" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110">
+                        <!-- Modal -->
+                        <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="{% static 'myapp/img/gdsc1.jfif' %}" alt="Certification 1 Full" class="w-auto max-h-full max-w-full">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 hover:text-blue-500 transition-colors duration-300">Google Developer Student Club Mobile Development Workshops</h3>
+                        <p class="text-gray-500 mt-2">Issued by: GDSC - University of San Carlos</p>
+                        <p class="text-gray-400 text-sm mt-4">Date Issued: January 2023</p>
+                    </div>
+                </div>
+        
+                <!-- Certification Card 2 -->
+                <div class="relative bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl mx-auto w-full max-w-lg">
+                    <div class="overflow-hidden h-72 rounded-t-xl group relative">
+                        <img src="{% static 'myapp/img/gdsc2.jfif' %}" alt="Certification 2" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110">
+                        <!-- Modal -->
+                        <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="{% static 'myapp/img/gdsc2.jfif' %}" alt="Certification 2 Full" class="w-auto max-h-full max-w-full">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 hover:text-blue-500 transition-colors duration-300">Introduction to Machine Learning with Tensor Flow</h3>
+                        <p class="text-gray-500 mt-2">Issued by: GDSC - Cebu Technological University</p>
+                        <p class="text-gray-400 text-sm mt-4">Date Issued: June 2022</p>
+                    </div>
+                </div>
+        
+                <!-- Certification Card 3 -->
+                <div class="relative bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl mx-auto w-full max-w-lg">
+                    <div class="overflow-hidden h-72 rounded-t-xl group relative">
+                        <img src="{% static 'myapp/img/psite.jfif' %}" alt="Certification 3" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110">
+                        <!-- Modal -->
+                        <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="{% static 'myapp/img/psite.jfif' %}" alt="Certification 3 Full" class="w-auto max-h-full max-w-full">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 hover:text-blue-500 transition-colors duration-300">Cebu ICT Student Congress</h3>
+                        <p class="text-gray-500 mt-2">Issued by: Philippine Society of Information Technology Educators</p>
+                        <p class="text-gray-400 text-sm mt-4">Date Issued: August 2021</p>
+                    </div>
+                </div>
+        
+                <!-- Certification Card 4 -->
+                <div class="relative bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl mx-auto w-full max-w-lg">
+                    <div class="overflow-hidden h-72 rounded-t-xl group relative">
+                        <img src="{% static 'myapp/img/tesda.jfif' %}" alt="Certification 4" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110">
+                        <!-- Modal -->
+                        <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="{% static 'myapp/img/tesda.jfif' %}" alt="Certification 4 Full" class="w-auto max-h-full max-w-full">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 hover:text-blue-500 transition-colors duration-300">Contact Center Services NCII</h3>
+                        <p class="text-gray-500 mt-2">Issued by: Call Center Academy</p>
+                        <p class="text-gray-400 text-sm mt-4">Date Issued: December 2020</p>
+                    </div>
+                </div>
+            </div>
         </section>
         
-        <section id="contact" class="min-h-screen bg-gray-100 flex flex-col justify-center items-center py-12 px-6">
+        
+        
+        
+        <section id="contact" class="min-h-screen bg-white flex flex-col justify-center items-center py-12 px-6">
             <h2 class="text-4xl font-bold mb-8 text-gray-800">Get In Touch</h2>
-            <form class="max-w-xl w-full bg-white shadow-lg rounded-lg p-8 space-y-6">
+            <form class="max-w-xl w-full bg-white shadow-lg rounded-lg p-8 space-y-6" data-aos="fade-up">
                 <div class="flex flex-col space-y-2">
                     <label for="name" class="text-lg font-medium text-gray-700">Your Name</label>
                     <input type="text" id="name" class="block w-full p-3 text-base border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400" placeholder="Name" required>
@@ -232,7 +426,14 @@
         
         
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,  // Duration of animation in milliseconds
+            once: true       // Only animate elements once while scrolling down
+        });
+    </script>
+    
     <script>
         const toggler = document.getElementById('navbar-toggler');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -274,6 +475,9 @@
                 }
             });
         });
+        
     </script>
+
+    
 </body>
 </html>

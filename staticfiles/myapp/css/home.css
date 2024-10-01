@@ -1,0 +1,22 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+/* Animation for the hamburger icon */
+.hamburger {
+    transition: transform 0.3s ease;
+}
+.hamburger.active {
+    transform: rotate(90deg);
+}
+/* Styles for mobile menu card */
+#mobile-menu {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 0; /* Initially hide the menu */
+}
