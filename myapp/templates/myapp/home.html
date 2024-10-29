@@ -63,19 +63,25 @@
         
                 <!-- Social Media Icons -->
                 <div class="flex space-x-6 md:space-x-10">
-                    <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank">
+                    <a href="https://www.linkedin.com/in/hans-archer-dalubatan-661b2a1aa/" target="_blank">
                         <img src="{% static 'myapp/img/linkedin.svg' %}" alt="LinkedIn" class="w-16 h-16 md:w-12 md:h-12 transition-transform duration-300 transform hover:scale-110" />
                     </a>
-                    <a href="https://www.instagram.com/your-instagram-username" target="_blank">
-                        <img src="{% static 'myapp/img/instagram.svg' %}" alt="Instagram" class="w-16 h-16 md:w-12 md:h-12 transition-transform duration-300 transform hover:scale-110" />
+                    <a href="https://profile.indeed.com/p/hansarchermontezond-g22m4yp" target="_blank">
+                        <img src="{% static 'myapp/img/indeed.svg' %}" alt="Indeed" class="w-16 h-16 md:w-12 md:h-12 transition-transform duration-300 transform hover:scale-110" />
                     </a>
-                    <a href="https://www.facebook.com/your-facebook-username" target="_blank">
+                    <a href="https://www.facebook.com/hanzzarcherr" target="_blank">
                         <img src="{% static 'myapp/img/facebook.svg' %}" alt="Facebook" class="w-16 h-16 md:w-12 md:h-12 transition-transform duration-300 transform hover:scale-110" />
                     </a>
-                    <a href="https://github.com/your-github-username" target="_blank">
+                    <a href="https://github.com/hanz-archer" target="_blank">
                         <img src="{% static 'myapp/img/githublogo.svg' %}" alt="GitHub" class="w-16 h-16 md:w-12 md:h-12 transition-transform duration-300 transform hover:scale-110" />
                     </a>
                 </div>
+        
+                <div class="mt-6">
+                    <a href="{% url 'download_cv' %}" class="inline-block bg-blue-500 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-600 transition duration-300">
+                        Download CV
+                    </a>
+                </div>                
             </div>
         
             <!-- Right Section with Image -->
@@ -83,6 +89,7 @@
                 <img src="{% static 'myapp/img/myphoto.jpg' %}" alt="Hanz Archer" class="w-2/3 md:w-3/4 h-auto rounded-lg shadow-lg" />
             </div>
         </section>
+        
         
         
         

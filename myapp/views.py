@@ -2,6 +2,10 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django import forms
 from django.contrib import messages
+from django.http import HttpResponse, Http404
+from django.conf import settings
+import os
+from django.contrib.staticfiles import finders
 
 # Define the contact form class
 class ContactForm(forms.Form):
@@ -33,3 +37,17 @@ def home(request):
         form = ContactForm()
 
     return render(request, 'myapp/home.html', {'form': form})
+
+def download_cv(request):
+    # Use Django's static file finder to locate the file in the static directory
+    file_path = finders.find('myapp/documents/Hans Archer Dalubatan.pdf')
+
+    # Check if file exists
+    if file_path:
+        with open(file_path, 'rb') as cv_file:
+            response = HttpResponse(cv_file.read(), content_type='application/pdf')
+            response['Content-Disposition'] = 'attachment; filename="Hans Archer Dalubatan.pdf"'
+            return response
+    else:
+        raise Http404("CV file not found.")
+
