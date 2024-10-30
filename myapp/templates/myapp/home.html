@@ -292,14 +292,13 @@
             <p class="text-gray-600 text-center mb-8">Check out some of the exciting projects I'm currently working on.</p>
             
             <!-- Projects Container -->
-            <div class="flex flex-col md:flex-row justify-center items-stretch w-full max-w-6xl mx-auto mt-8 space-y-8 md:space-y-0 md:space-x-8" data-aos="fade-up"> 
-                
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto mt-8" data-aos="fade-up"> 
                 <!-- Project Card 1 -->
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full h-[600px] flex flex-col"> 
                     <img src="{% static 'myapp/img/kwentasklaras.png' %}" alt="Project Image" class="w-32 h-32 object-cover mx-auto mt-4"> 
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-semibold mb-2 text-center mt-10">Kwentas Klaras Digital Project Management Information System</h3> <!-- Increased to mt-10 -->
-                        <p class="text-gray-600 mb-4 text-center mt-6">Designed to streamline project workflows by providing real-time data access for government. This innovative platform enhances productivity and transparency.</p> <!-- Increased to mt-6 -->
+                        <h3 class="text-2xl font-semibold mb-2 text-center mt-10">Kwentas Klaras Digital Project Management Information System</h3>
+                        <p class="text-gray-600 mb-4 text-center mt-6">Designed to streamline project workflows by providing real-time data access for government. This innovative platform enhances productivity and transparency.</p>
                         <div class="mt-auto flex justify-center">
                             <a href="https://kwentasklaraspmis.pythonanywhere.com" class="inline-block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 w-2/3 text-center">View Project</a>
                         </div>
@@ -314,14 +313,11 @@
                         </ul>
                     </div>
                 </div>
-                
-                
-        
-                <!-- Project Card 2 -->
+
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full h-[600px] flex flex-col"> 
                     <img src="{% static 'myapp/img/vcall.png' %}" alt="Project Image" class="w-full h-auto object-contain mx-auto mt-4">
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-semibold mb-2 text-center">Simple Videocall Webapp using Agora Plugin</h3>
+                        <h3 class="text-2xl font-semibold mb-2 text-center">Simple Videocall Webapp using AgoraSDK</h3>
                         <p class="text-gray-600 mb-4 text-center">Utilizing the Agora Plugin and the technology related to WebSockets, constructed a web application that permits real-time video calling between users effortlessly. This application enables users to create or join video conferences while enjoying quality audio and video.</p>
                         <div class="mt-auto flex justify-center">
                             <a href="https://github.com/hanz-archer/personalchat" class="inline-block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 w-2/3 text-center">View Project</a>
@@ -336,13 +332,12 @@
                         </ul>
                     </div>
                 </div>
-        
-                <!-- Project Card 3 -->
+
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full h-[600px] flex flex-col"> 
                     <img src="{% static 'myapp/img/ip.png' %}" alt="Project Image" class="w-full h-auto object-contain mx-auto mt-4">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-2xl font-semibold mb-2 text-center">IP Address and Firewall Tracker</h3>
-                        <p class="text-gray-600 mb-4 text-center">Developed an IP and Firewall Tracker application designed to monitor and manage IP addresses and firewall rules in real-time. The application provides users with insights into network traffic and security by tracking incoming and outgoing connections, along with associated IP addresses.</p>
+                        <p class="text-gray-600 mb-4 text-center">A simple personal project IP and Firewall Tracker application designed to monitor and manage IP addresses and firewall rules in real-time. The application provides users with insights into network traffic and security by tracking incoming and outgoing connections, along with associated IP addresses.</p>
                         <div class="mt-auto flex justify-center">
                             <a href="https://github.com/hanz-archer/IP-FirewallTracker" class="inline-block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 w-2/3 text-center">View Project</a>
                         </div>
@@ -357,8 +352,64 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full h-[600px] flex flex-col"> 
+                    <img src="{% static 'myapp/img/lvl.png' %}" alt="Project Image" class="w-full h-auto object-contain mx-auto mt-4">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-semibold mb-2 text-center">LVL+ Ecommerce with Django Paypal Integration</h3>
+                        <p class="text-gray-600 mb-4 text-center">A minimalist e-commerce platform integrated with Django and PayPal, providing seamless online transactions for customers. LVL+ offers a smooth shopping experience with secure payments, user-friendly product listings, and efficient order management.</p>
+                        <div class="mt-auto flex justify-center">
+                            <a href="https://github.com/hanz-archer/LVL-Shoppping-Ecommerce" class="inline-block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 w-2/3 text-center">View Project</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center p-4">
+                        <ul class="flex space-x-4 text-gray-600">
+                            <li><img src="{% static 'myapp/img/html.svg' %}" alt="HTML Logo" class="w-8 h-8"></li>
+                            <li><img src="{% static 'myapp/img/css.svg' %}" alt="CSS Logo" class="w-8 h-8"></li>
+                            <li><img src="{% static 'myapp/img/js.svg' %}" alt="JavaScript Logo" class="w-8 h-8"></li>
+                            <li><img src="{% static 'myapp/img/django.svg' %}" alt="Django Logo" class="w-8 h-8"></li>
+                            <li><img src="{% static 'myapp/img/mysql.svg' %}" alt="Firebase Logo" class="w-8 h-8"></li>
+                            <li><img src="{% static 'myapp/img/paypal.svg' %}" alt="Firebase Logo" class="w-8 h-8"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full h-[600px] flex flex-col"> 
+                    <img src="{% static 'myapp/img/cicd.png' %}" alt="Project Image" class="w-full h-auto object-contain mx-auto mt-4">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-semibold mb-2 text-center">Simple CI/CD Pipeline Workflow for Github Pages Template</h3>
+                        <p class="text-gray-600 mb-4 text-center">A streamlined CI/CD pipeline workflow designed for GitHub Pages projects, automating deployments and ensuring seamless updates. This template enables continuous integration and delivery, making it easy to deploy and maintain static websites efficiently.</p>
+                        <div class="mt-auto flex justify-center">
+                            <a href="https://github.com/hanz-archer/SIA-2" class="inline-block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 w-2/3 text-center">View Project</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center p-4">
+                        <ul class="flex space-x-4 text-gray-600">
+                            <li><img src="{% static 'myapp/img/html.svg' %}" alt="HTML Logo" class="w-8 h-8"></li>
+                            <li><img src="{% static 'myapp/img/css.svg' %}" alt="CSS Logo" class="w-8 h-8"></li>
+                            <li><img src="{% static 'myapp/img/githublogo.svg' %}" alt="Django Logo" class="w-8 h-8"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 max-w-md w-full h-[600px] flex flex-col"> 
+                    <img src="{% static 'myapp/img/javanft.png' %}" alt="Project Image" class="w-full h-auto object-contain mx-auto mt-4">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-semibold mb-2 text-center">A console based NFT Shop Java Based</h3>
+                        <p class="text-gray-600 mb-4 text-center">A Java-based console application for buying, selling, and managing NFTs. This project provides a simplified e-commerce experience focused on digital assets, allowing users to explore NFT collections and make transactions directly from the console.</p>
+                        <div class="mt-auto flex justify-center">
+                            <a href="https://github.com/hanz-archer/NFT-Shop-Java" class="inline-block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 w-2/3 text-center">View Project</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center p-4">
+                        <ul class="flex space-x-4 text-gray-600">
+                            <li><img src="{% static 'myapp/img/java.svg' %}" alt="JavaScript Logo" class="w-8 h-8"></li>
+                        </ul>
+                    </div>
+                </div>   
             </div>
         </section>
+        
         
         
         
