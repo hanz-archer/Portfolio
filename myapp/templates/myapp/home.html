@@ -36,9 +36,9 @@
         </nav>
     </header>
     
-    <div id="mobile-menu" class="hidden md:hidden">
+    <div id="mobile-menu" class="hidden md:hidden sticky top-0 z-10 bg-white shadow-md">
         <nav>
-            <ul class="flex flex-col space-y-4 bg-white px-4 py-2">
+            <ul class="flex flex-col space-y-4 px-4 py-2">
                 <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
                 <li><a href="#about" class="hover:text-blue-600 transition">About Me</a></li>
                 <li><a href="#education" class="hover:text-blue-600 transition">Education</a></li>
@@ -48,6 +48,7 @@
             </ul>
         </nav>
     </div>
+    
     
     <main>
         <section id="home" class="min-h-screen bg-white flex flex-col md:flex-row p-10 md:p-20 mb-4">
@@ -593,26 +594,27 @@
     </script>
     
     <script>
+        // Get references to the toggler and mobile menu
         const toggler = document.getElementById('navbar-toggler');
         const mobileMenu = document.getElementById('mobile-menu');
         const hamburgerIcon = toggler.querySelector('.hamburger');
-
+    
         // Toggle mobile menu visibility and animate the hamburger icon
         toggler.addEventListener('click', () => {
             // Toggle the visibility of the mobile menu
             mobileMenu.classList.toggle('hidden');
-
+    
             // Change max-height for animation
             if (!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.style.maxHeight = `${mobileMenu.scrollHeight}px`; // Expand to full height
             } else {
                 mobileMenu.style.maxHeight = '0'; // Collapse
             }
-
+    
             // Toggle hamburger icon animation (rotate 90 degrees)
             hamburgerIcon.classList.toggle('active');
         });
-
+    
         // Smooth scrolling effect for internal anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -624,7 +626,7 @@
                         behavior: 'smooth'
                     });
                 }
-
+    
                 // Close mobile menu after click (for mobile view)
                 if (window.innerWidth < 768) {
                     mobileMenu.classList.add('hidden');
@@ -633,9 +635,17 @@
                 }
             });
         });
-        
+    
+        // Close the mobile menu if clicking outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the mobile menu and toggle button
+            if (!mobileMenu.contains(event.target) && !toggler.contains(event.target)) {
+                mobileMenu.classList.add('hidden'); // Close the menu
+                mobileMenu.style.maxHeight = '0'; // Collapse menu
+                hamburgerIcon.classList.remove('active'); // Reset hamburger icon
+            }
+        });
     </script>
-
     
 </body>
 </html>
