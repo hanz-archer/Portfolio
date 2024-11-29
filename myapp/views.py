@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponse, Http404
 from django.conf import settings
 import os
+from django.contrib import messages
 from django.contrib.staticfiles import finders
 
 # Define the contact form class
@@ -23,16 +24,22 @@ def home(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
 
-            # Send the email
-            send_mail(
-                subject,
-                f"Message from {name} <{email}>\n\n{message}",
-                email,  # Sender email (from the form input)
-                ['dalubatanhans@gmail.com'],  # Recipient email
-                fail_silently=False,
-            )
-            messages.success(request, 'Your message has been sent successfully!')
-            return redirect('home')  # Redirect to home after sending
+            try:
+                # Send the email
+                send_mail(
+                    subject,
+                    f"Message from {name} <{email}>\n\n{message}",
+                    email,  # Sender email (from the form input)
+                    ['dalubatanhans@gmail.com'],  # Recipient email
+                    fail_silently=False,
+                )
+                messages.success(request, 'Your message has been sent successfully!')
+                return redirect('home')  # Redirect to home after sending
+            except Exception as e:
+                # Log the error if needed and show a failure message
+                messages.error(request, 'An error occurred while sending your message. Please try again later.')
+        else:
+            messages.error(request, 'There was an error in your form. Please check the inputs and try again.')
     else:
         form = ContactForm()
 
